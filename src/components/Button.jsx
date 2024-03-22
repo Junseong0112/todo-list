@@ -1,6 +1,7 @@
 import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Button = ({ children, oauth, type, onClick, className = "" }) => {
+  // console.log(onClick);
   const OAuthIcon = oauth === "google" ? <FaGoogle /> : <FaGithub />;
   const baseClass =
     " rounded-lg mx-auto border-none cursor-pointer text-base font-medium py-4";

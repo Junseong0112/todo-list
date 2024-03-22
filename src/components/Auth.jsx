@@ -11,14 +11,13 @@ function Auth() {
   const handleLogin = async (type) => {
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
-    console.log(email);
-    console.log(password);
 
     const { user, error } =
       type === "LOGIN"
-        ? await supabase.auth.signIn({ email, password })
+        ? await supabase.auth.signInWithPassword({ email, password })
         : await supabase.auth.signUp({ email, password });
 
+    console.log(type);
     if (error) {
       setHelperText({ error: true, text: error.message });
     } else if (!user && !error) {
@@ -48,11 +47,11 @@ function Auth() {
   const forgotPassword = async (e) => {
     e.preventDefault();
     const email = prompt("가입하신 이메일을 입력해주세요");
-    console.log(email);
+
     if (email === null || email === "") {
       setHelperText({ error: true, text: "이메일을 올바르게 입력하세요." });
     } else {
-      let { error } = await supabase.auth.api.resetPasswordForEmail(email);
+      let { error } = await supabase.auth.resetPasswordForEmail(email);
       if (error) {
         console.error("Error", error.message);
       } else {
@@ -98,18 +97,18 @@ function Auth() {
           )}
           <article className="flex justify-between gap-3 mt-5">
             <Button
+              className="w-3/6 border border-gray-500 border-solid"
+              type={"submit"}
+              onClick={() => handleLogin("LOGIN")}
+            >
+              Sign In
+            </Button>
+            <Button
               className="w-3/6 text-white bg-ex-red"
               type={"submit"}
               onClick={() => handleLogin("REGISTER").catch(console.error)}
             >
               Sign Up
-            </Button>
-            <Button
-              className="w-3/6 border border-gray-500 border-solid"
-              type={"submit"}
-              onclick={() => handleLogin("LOGIN")}
-            >
-              Sign In
             </Button>
           </article>
           <p className="relative mx-auto my-10 text-xs text-center bg-transparent text-opacity-40">
