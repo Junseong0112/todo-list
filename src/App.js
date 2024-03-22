@@ -8,12 +8,13 @@ function App() {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session);
+      setUser(session?.user ?? null);
     });
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session);
+      const currentUser = session?.user;
+      setUser(currentUser ?? null);
     });
 
     return () => subscription.unsubscribe();
