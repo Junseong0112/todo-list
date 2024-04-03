@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# TODO_LIST
+> 로그인 기능을 이용하여 제작한 투두리스트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 로그인
+![image](https://github.com/Junseong0112/todo-list/assets/108931006/64147d1d-1be2-4c73-9914-e7b4fb9a742d)
 
-## Available Scripts
+## 메인
+![image](https://github.com/Junseong0112/todo-list/assets/108931006/84abaa0b-115f-43de-8ef0-5ff49217a573)
 
-In the project directory, you can run:
+## 실행
 
-### `npm start`
+```shell
+npm install
+npm run start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 사용
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| JavaScript    |   React  |   Tailwind  |   Netlify  |  Supabase   |
+| :-----------: | :------: | :---------: |   :-----:  | :---------: |
+| ![javascript] | ![react] | ![Tailwind] | ![netlify] | ![supabase] |
 
-### `npm test`
+## 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. OAuth를 이용하여 깃허브, 구글 로그인으로 가능
+2. 이메일로 가입 기능 구현
+3. Supabase를 이용하여 데이터베이스 연결
+4. 할일 생성, 삭제, 체크 까지 구현
 
-### `npm run build`
+## 배포
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`Netlify` 이용
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<https://supabase-todolist.netlify.app/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[netlify]: https://github.com/Junseong0112/todo-list/assets/108931006/d6de13df-196a-400f-ba27-fd96946dd7ae
+[Tailwind]: https://github.com/Junseong0112/todo-list/assets/108931006/a325a240-ba51-4468-aca1-d1809f065185
+[javascript]: https://github.com/Junseong0112/todo-list/assets/108931006/b21b70b4-4295-4f9b-afc9-fd1b4fb996d8
+[react]: https://github.com/Junseong0112/todo-list/assets/108931006/c76c3163-1591-4976-84b7-c7a6d2350e92
+[supabase]: https://github.com/Junseong0112/todo-list/assets/108931006/4429ae60-4e01-49fb-b658-14bd57ca2031
